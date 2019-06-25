@@ -28,10 +28,10 @@ module "eks-workers" {
   eks_worker_subnet_ids   = var.eks_worker_subnet_ids
   eks_worker_group_name   = var.eks_worker_group_name
   eks_worker_ami          = var.eks_worker_ami
- 
+
   # Userdata Vars
-  eks_api_endpoint            = aws_eks_cluster.this.endpoint
-  eks_api_ca                  = aws_eks_cluster.this.certificate_authority[0].data
+  eks_api_endpoint = aws_eks_cluster.this.endpoint
+  eks_api_ca       = aws_eks_cluster.this.certificate_authority[0].data
 }
 
 
